@@ -1,0 +1,14 @@
+<?php
+
+
+$approot = realpath(dirname(__FILE__)."/../../")."/";;
+$root = "http://nzz.lo/app.php";
+$options = array(
+   "loginGet" => "$root/login", 
+   "loginPost" => "$root/check",
+   "loginParams" => array("_username" => "liipnzz", "_password" => "liipnzz", "_remember_me" => 1),
+   "startPage" => "$root/",
+   "morePages" => array("$root/someotherpage"),
+   "jackrabbitDir" => $approot."jackrabbit"
+   );
+   
