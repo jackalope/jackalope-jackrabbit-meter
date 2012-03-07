@@ -1,14 +1,19 @@
 <?php
 
-
+// In which directory is the jackrabbit directory with the log files
 $approot = realpath(dirname(__FILE__)."/../../")."/";;
-$root = "http://nzz.lo/app.php";
+// where is your website
+$root = "http://yourapp.lo/app.php";
 $options = array(
+   //where does the user end up, when he has to login
    "loginGet" => "$root/login", 
+   //where is the login data sent
    "loginPost" => "$root/check",
-   "loginParams" => array("_username" => "liipnzz", "_password" => "liipnzz", "_remember_me" => 1),
-   "startPage" => "$root/",
-   "morePages" => array("$root/someotherpage"),
+   //the login parameters
+   "loginParams" => array("_username" => "username", "_password" => "password", "_remember_me" => 1),
+   //which pages should be tested
+    "pages" => array("$root/","$root/someotherpage"),
+    //where is the jackrabbit directory with the log directory in it
    "jackrabbitDir" => $approot."jackrabbit"
    );
    
