@@ -58,7 +58,7 @@ class JJMeter
                 $types[$method]++;
             }
         }
-
+        ksort($types);
         foreach ($types as $name => $count) {
             print " " . $name . str_repeat(" ", 17 - strlen($name)) . ": " . $count . "\n";
         }
